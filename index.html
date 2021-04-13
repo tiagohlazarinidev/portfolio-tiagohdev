@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <script src="js/game.js"></script>
+    <title>Jogo da velha</title>
+  </head>
+  <body>
+    <header>
+      <div id="wrapper" class="col justify-content-center">
+        <h1 class="glitch" data-text="JOGO DA VELHA">JOGO DA VELHA</h1>
+        <span class="sub">1.0</span>
+      </div>
+    </header>
+
+    <section class="container">
+      <div id="" class="row justify-content-center">
+        <div
+          id="dvQuemComeca"
+          class="row justify-content-center text-uppercase"
+        >
+          Quem Joga:
+        </div>
+        <div class="row justify-content-center">
+          <button
+            id="coolBeans"
+            class="col-2 justify-content-center align-items-center text-uppercase"
+            onclick="inicia()"
+          >
+            Iniciar Jogo
+          </button>
+        </div>
+      </div>
+
+      <div id="dvjogo" class="justify-content-center">
+        <div id="p1" class="posJogo" onclick="jogar(1)"></div>
+        <div id="p2" class="posJogo" onclick="jogar(2)"></div>
+        <div id="p3" class="posJogo" onclick="jogar(3)"></div>
+        <div id="p4" class="posJogo" onclick="jogar(4)"></div>
+        <div id="p5" class="posJogo" onclick="jogar(5)"></div>
+        <div id="p6" class="posJogo" onclick="jogar(6)"></div>
+        <div id="p7" class="posJogo" onclick="jogar(7)"></div>
+        <div id="p8" class="posJogo" onclick="jogar(8)"></div>
+        <div id="p9" class="posJogo" onclick="jogar(9)"></div>
+      </div>
+
+      <div
+        id="nivelbutton"
+        class="d-flex flex-nowrap align-items-center ml-auto justify-content-center text-uppercase"
+      >
+        <p class="p-2">Dificuldade:</p>
+        <button
+          id="nivelselector"
+          class="skewBtn blue col-4 text-uppercase ml-auto"
+          onclick="document.getElementById('nivelselector').value = 1"
+        >
+          Mel na chupeta
+        </button>
+        <button
+          id="nivelselector"
+          class="skewBtn blue col-4 text-uppercase m-4 ml-auto"
+          onclick="document.getElementById('nivelselector').value = 2"
+        >
+          Um tapinha não doe
+        </button>
+      </div>
+      <div id="showwinner" class="justify-content-center">
+        <p id="quemganhou"></p>
+      </div>
+  </body>
+</html>
